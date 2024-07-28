@@ -54,10 +54,6 @@ img {
     height: auto;
 }
 
-.hide {
-    display: none;
-}
-
 .container {
     min-width: 320px;
     margin: 0 auto;
@@ -115,6 +111,13 @@ img {
     display: inline-flex;
     align-items: center;
     margin-right: 76px;
+    padding: 17.5px 0 17.5px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
+    .header-logo {
+        margin-right: 120px;
+    }
 }
 
 .headerlogo-studio {
@@ -134,65 +137,105 @@ img {
 }
 
 .header-menu {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
-
-.header-menulink {
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2E2F42;
-    padding: 24px 0;
-    text-decoration: none;
-    position: relative;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-menulink.active {
-    color: #404BBF;
-}
-
-.header-menulink.active::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: #404BBF;
-}
-
-.header-menulink:hover,
-.header-menulink:focus {
-    color: #404BBF;
+    display: none;
 }
 
 .header-contactlist {
+    display: none;
+}
+
+.header-menu-icon-wrapper {
     display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-left: auto;
-    justify-content: space-between;
+    fill: #2F2F37;
+    margin-left: 74px;
 }
 
-.header-contactitem:last-child {
-    margin-right: 0;
+@media only screen and (min-width: 768px) {
+    .header-menu-icon-wrapper {
+        display: none;
+    }
 }
 
-.header-contactlink {
-    letter-spacing: 0.02em;
-    padding: 24px 0;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+@media only screen and (min-width: 768px) {
+    .header-menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        }
+
+    .header-menulink {
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #2E2F42;
+        padding: 24px 0;
+        text-decoration: none;
+        position: relative;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+    .header-menulink.active {
+        color: #404BBF;
+        }
+
+    .header-menulink.active::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #404BBF;
+        }
+
+    .header-menulink:hover,
+    .header-menulink:focus {
+        color: #404BBF;
+        }
 }
 
-.header-contactlink:hover,
-.header-contactlink:focus {
-    color: #404BBF;
+@media only screen and (min-width: 768px) {
+    .header-contactlist {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-left: auto;
+        justify-content: space-between;
+        }
+
+    .header-contactitem:last-child {
+        margin-right: 0;
+        }
+
+    .header-contactlink {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.48px;
+        padding: 24px 0;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+    .header-contactlink:hover,
+    .header-contactlink:focus {
+        color: #404BBF;
+        }
+}
+
+@media only screen and (min-width: 1158px) {
+    .header-contactlist {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .header-contactlink {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+        }
 }
 
 /* MAIN */
@@ -853,13 +896,19 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 408px;
-    min-height: 584px;
+    width: 288px;
+    min-height: 623px;
     background: #fcfcfc;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+@media only screen and (min-width: 768px) {
+    .modal-window {
+        width: 408px;
+        min-height: 584px;
+    }
 }
 
 .modal-exit-button {
@@ -976,6 +1025,7 @@ h1 {
 
 .modal-form-checkbox {
     margin-bottom: 24px;
+    display: flex;
 }
 
 .modal-form-checkbox-label {

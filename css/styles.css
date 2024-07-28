@@ -473,8 +473,11 @@ h1 {
     justify-content: center;
     gap: 24px;
     align-items: center;
-    fill: #f4f4fd;
     padding-bottom: 32px;
+}
+
+.social-icon {
+    fill: #f4f4fd;
 }
 
 .social-link {
@@ -618,17 +621,59 @@ h1 {
 .footer {
     background-color: #2E2F42;
     color: #F4F4FD;
-    padding: 100px 0;
+    padding: 96px 0;
+}
+
+@media only screen and (min-width: 1158px) {
+    .footer {
+        padding: 100px 0;
+    }
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 72px;
+    column-gap: 24px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
+    .footer-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 108px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .footer-content {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 0;
+    }
 }
 
 .footer-left {
-    margin-right: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-left {
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .footer-left {
+        margin-right: 120px;
+    }
 }
 
 .footer-logo {
@@ -657,7 +702,19 @@ h1 {
 .footer-center {
     display: flex;
     flex-direction: column;
-    margin-right: 80px;
+    align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-center {
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .footer-center {
+        margin-right: 80px;
+    }
 }
 
 .footer-social-text,
@@ -696,9 +753,31 @@ h1 {
     background-color: #31D0AA;
 }
 
+.footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-right {
+        align-items: flex-start;
+    }
+}
+
 .footer-subscr-form {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-subscr-form {
+        flex-direction: row;
+        gap: 24px;
+        align-items: flex-start;
+    }
 }
 
 .footer-subscr-input {
@@ -723,7 +802,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 165px;
+    width: 165px;
     height: 40px;
     font-family: "Roboto", sans-serif;
     font-size: 16px;

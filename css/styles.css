@@ -401,23 +401,36 @@ h1 {
 /* 3 section */
 .main-team {
     background-color: #F4F4FD;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
     overflow: hidden;
+}
+
+@media only screen and (min-width: 1158px) {
+    .main-team {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 .main-team .main-subtitle {
     margin-bottom: 72px;
 }
 
-.main-team .tm-card {
-    padding: 32px 0 32px;
-}
-
 .team-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 72px;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .team-member {
@@ -428,7 +441,6 @@ h1 {
         0 1px 6px rgba(46, 47, 66, 0.08),
         0 1px 1px rgba(46, 47, 66, 0.16),
         0 2px 1px rgba(46, 47, 66, 0.08);
-    flex-basis: calc((100% - 72px) / 4);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -462,6 +474,7 @@ h1 {
     gap: 24px;
     align-items: center;
     fill: #f4f4fd;
+    padding-bottom: 32px;
 }
 
 .social-link {
@@ -486,9 +499,16 @@ h1 {
 
 /* 4 section */
 .main-portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 } 
+
+@media only screen and (min-width: 1158px) {
+    .main-portfolio {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
 
 .main-portfolio .main-subtitle {
     margin-bottom: 72px;
@@ -508,6 +528,12 @@ h1 {
     justify-content: center;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
+    .portfolio-list {
+        row-gap: 72px;
+    }
+}
+
 .portfolio-item {
     position: relative;
     flex: 1 1 calc((100% - 48px) / 3);
@@ -517,6 +543,12 @@ h1 {
     border-radius: 4px;
     overflow: hidden;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
+    .portfolio-item {
+        flex: 1 1 calc((100% - 48px) / 2);
+    }
 }
 
 .portfolio-item:hover,

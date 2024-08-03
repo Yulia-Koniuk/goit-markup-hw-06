@@ -147,7 +147,6 @@ img {
 .header-menu-icon-wrapper {
     display: flex;
     fill: #2F2F37;
-    margin-left: 74px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -759,8 +758,6 @@ h1 {
 
 .portfolio-item {
     position: relative;
-    flex: 1 1 calc((100% - 48px) / 3);
-    width: calc((100% - 48px) / 3);
     min-width: 200px;
     text-align: center;
     border-radius: 4px;

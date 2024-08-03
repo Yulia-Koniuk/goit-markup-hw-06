@@ -15,9 +15,9 @@
 
 <body>
     <header class="header">
-        <div class="container">
-            <nav class="header-nav">       
-                <a class="header-logo" href="./index.html">Web<span class="headerlogo-studio">Studio</span></a>
+        <div class="container header-content">
+            <a class="header-logo" href="./index.html">Web<span class="headerlogo-studio">Studio</span></a>
+            <nav class="header-nav">  
                 <a class="header-menu-icon-wrapper" href="#">
                     <svg class="header-menu-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-group"></use>
@@ -107,7 +107,7 @@
                 <h2 class="main-subtitle">Our Team</h2>
                 <ul class="team-list card-set">
                     <li class="team-member card-set-item">
-                        <img class="team-photo" src="./images/mark.jpg" srcset="./images/mark@1x.jpg 1x, ./images/mark@2x.jpg 2x" width="264" height="260" alt="Portrait of a team member">
+                        <img class="team-photo" src="./images/mark@1x.jpg" srcset="./images/mark@1x.jpg 1x, ./images/mark@2x.jpg 2x" width="264" height="260" alt="Portrait of a team member">
                         <div class="tm-card">
                             <h3 class="team-name">Mark Guerrero</h3>
                             <p class="team-role">Product Designer</p>
@@ -144,7 +144,7 @@
                         </div>
                     </li>
                     <li class="team-member card-set-item">
-                        <img class="team-photo" src="./images/tom.jpg" srcset="./images/tom@1x.jpg 1x, ./images/tom@2x.jpg 2x" width="264" height="260" alt="Portrait of a team member">
+                        <img class="team-photo" src="./images/tom@1x.jpg" srcset="./images/tom@1x.jpg 1x, ./images/tom@2x.jpg 2x" width="264" height="260" alt="Portrait of a team member">
                         <div class="tm-card">
                             <h3 class="team-name">Tom Ford</h3>
                             <p class="team-role">Frontend Developer</p>
@@ -182,7 +182,7 @@
                         </div>
                     </li>
                     <li class="team-member card-set-item">
-                        <img class="team-photo" src="./images/camila.jpg" srcset="./images/camila@1x.jpg 1x, ./images/camila@2x.jpg 2x" width="264" height="260" alt="Portrait of a team member">
+                        <img class="team-photo" src="./images/camila@1x.jpg" srcset="./images/camila@1x.jpg 1x, ./images/camila@2x.jpg 2x" width="264" height="260" alt="Portrait of a team member">
                         <div class="tm-card">
                             <h3 class="team-name">Camila Garcia</h3>
                             <p class="team-role">Marketing</p>
@@ -219,7 +219,7 @@
                         </div>
                     </li>
                     <li class="team-member card-set-item">
-                        <img class="team-photo" src="./images/daniel.jpg" srcset="./images/daniel@1x.jpg 1x, ./images/daniel@2x.jpg 2x" width="264" height="260" alt="Portrait of a team member">
+                        <img class="team-photo" src="./images/daniel@1x.jpg" srcset="./images/daniel@1x.jpg 1x, ./images/daniel@2x.jpg 2x" width="264" height="260" alt="Portrait of a team member">
                         <div class="tm-card">
                             <h3 class="team-name">Daniel Wilson</h3>
                             <p class="team-role">UI Designer</p>
@@ -265,7 +265,19 @@
                 <ul class="portfolio-list card-set">
                     <li class="portfolio-item card-set-item">
                         <div class="portfolio-image-wrapper">
-                            <img class="portfolio-image" src="./images/bankingapp.jpg" srcset="./images/bankingapp@1x.jpg 1x, ./images/bankingapp@2x.jpg 2x" width="360" height="300" alt="Purple application layout">
+                            <picture class="portfolio-image">
+                                <source srcset="
+                                        ./images/bankingapp@1x.jpg 1x,
+                                        ./images/bankingapp@2x.jpg 2x
+                                    " media="(max-width: 767px)" />
+                                <source srcset="
+                                        ./images/bankingapp-tbdt@1x.jpg 1x,
+                                        ./images/bankingapp-tbdt@2x.jpg 2x
+                                    " media="(min-width: 768px)" />
+                            <img class="portfolio-image" src="./images/bankingapp@1x.jpg"
+                                srcset="./images/bankingapp@1x.jpg 1x, ./images/bankingapp@2x.jpg 2x" width="360" height="300"
+                                alt="Purple application layout">
+                            </picture>
                             <p class="overlay">14 Stylish and User-Friendly App Design Concepts &#183; Task Manager App &#183; Calorie Tracker App &#183; Exotic Fruit Ecommerce App &#183; Cloud Storage App</p>
                         </div>
                         <div class="pf-card">
@@ -275,7 +287,19 @@
                     </li>
                     <li class="portfolio-item card-set-item">
                         <div class="portfolio-image-wrapper">
-                            <img class="portfolio-image" src="./images/cashlesspayment.jpg" srcset="./images/cashlesspayment@1x.jpg 1x, ./images/cashlesspayment@2x.jpg 2x" width="360" height="300" alt="QR code phone scanner">
+                            <picture class="portfolio-image">
+                                <source srcset="
+                                        ./images/cashlesspayment@1x.jpg 1x,
+                                        ./images/cashlesspayment@2x.jpg 2x
+                                    " media="(max-width: 767px)" />
+                                <source srcset="
+                                        ./images/cashlesspayment-tbdt@1x.jpg 1x,
+                                        ./images/cashlesspayment-tbdt@2x.jpg 2x
+                                    " media="(min-width: 768px)" />
+                                <img class="portfolio-image" src="./images/cashlesspayment@1x.jpg"
+                                    srcset="./images/cashlesspayment@1x.jpg 1x, ./images/cashlesspayment@2x.jpg 2x" width="360" height="300"
+                                    alt="QR code phone scanner">
+                            </picture>
                             <p class="overlay">14 Stylish and User-Friendly App Design Concepts &#183; Task Manager App &#183; Calorie Tracker App
                                 &#183; Exotic Fruit Ecommerce App &#183; Cloud Storage App
                             </p>
@@ -287,7 +311,19 @@
                     </li>
                     <li class="portfolio-item card-set-item">
                         <div class="portfolio-image-wrapper">
-                            <img class="portfolio-image" src="./images/meditationapp.jpg" srcset="./images/meditationapp@1x.jpg 1x, ./images/meditationapp@2x.jpg 2x" width="360" height="300" alt="Laptop and phone on dark gray background">
+                            <picture class="portfolio-image">
+                                <source srcset="
+                                        ./images/meditationapp@1x.jpg 1x,
+                                        ./images/meditationapp@2x.jpg 2x
+                                    " media="(max-width: 767px)" />
+                                <source srcset="
+                                        ./images/meditationapp-tbdt@1x.jpg 1x,
+                                        ./images/meditationapp-tbdt@2x.jpg 2x
+                                    " media="(min-width: 768px)" />
+                                <img class="portfolio-image" src="./images/meditationapp@1x.jpg"
+                                    srcset="./images/meditationapp@1x.jpg 1x, ./images/meditationapp@2x.jpg 2x" width="360" height="300"
+                                    alt="Laptop and phone on dark gray background">
+                            </picture>
                             <p class="overlay">14 Stylish and User-Friendly App Design Concepts &#183; Task Manager App &#183; Calorie Tracker App
                                 &#183; Exotic Fruit Ecommerce App &#183; Cloud Storage App
                             </p>
@@ -299,7 +335,19 @@
                     </li>
                     <li class="portfolio-item card-set-item">
                         <div class="portfolio-image-wrapper">
-                            <img class="portfolio-image" src="./images/taxiservices.jpg" srcset="./images/taxiservices@1x.jpg 1x, ./images/taxiservices@2x.jpg 2x" width="360" height="300" alt="Drivers seat and control panel">
+                            <picture class="portfolio-image">
+                                <source srcset="
+                                        ./images/taxiservices@1x.jpg 1x,
+                                        ./images/taxiservices@2x.jpg 2x
+                                    " media="(max-width: 767px)" />
+                                <source srcset="
+                                        ./images/taxiservices-tbdt@1x.jpg 1x,
+                                        ./images/taxiservices-tbdt@2x.jpg 2x
+                                    " media="(min-width: 768px)" />
+                                <img class="portfolio-image" src="./images/taxiservices@1x.jpg 1x"
+                                    srcset="./images/taxiservices@1x.jpg 1x, ./images/taxiservices@2x.jpg 2x" width="360" height="300"
+                                    alt="Drivers seat and control panel">
+                            </picture>
                             <p class="overlay">14 Stylish and User-Friendly App Design Concepts &#183; Task Manager App &#183; Calorie Tracker App
                                 &#183; Exotic Fruit Ecommerce App &#183; Cloud Storage App
                             </p>
@@ -311,7 +359,19 @@
                     </li>
                     <li class="portfolio-item card-set-item">
                         <div class="portfolio-image-wrapper">
-                            <img class="portfolio-image" src="./images/screenillustrations.jpg" srcset="./images/screenillustrations@1x.jpg 1x, ./images/screenillustrations@2x.jpg 2x" width="360" height="300" alt="Purple-blue application layout with a moon">
+                            <picture class="portfolio-image">
+                                <source srcset="
+                                        ./images/screenillustrations@1x.jpg 1x,
+                                        ./images/screenillustrations@2x.jpg 2x
+                                    " media="(max-width: 767px)" />
+                                <source srcset="
+                                        ./images/screenillustrations-tbdt@1x.jpg 1x,
+                                        ./images/screenillustrations-tbdt@2x.jpg 2x
+                                    " media="(min-width: 768px)" />
+                                <img class="portfolio-image" src="./images/screenillustrations@1x.jpg"
+                                    srcset="./images/screenillustrations@1x.jpg 1x, ./images/screenillustrations@2x.jpg 2x" width="360" height="300"
+                                    alt="Purple-blue application layout with a moon">
+                            </picture>
                             <p class="overlay">14 Stylish and User-Friendly App Design Concepts &#183; Task Manager App &#183; Calorie Tracker App
                                 &#183; Exotic Fruit Ecommerce App &#183; Cloud Storage App
                             </p>
@@ -323,7 +383,19 @@
                     </li>
                     <li class="portfolio-item card-set-item">
                         <div class="portfolio-image-wrapper">
-                            <img class="portfolio-image" src="./images/onlinecourses.jpg" srcset="./images/onlinecourses@1x.jpg 1x, ./images/onlinecourses@2x.jpg 2x" width="360" height="300" alt="Woman in orange sweater in city">
+                            <picture class="portfolio-image">
+                                <source srcset="
+                                        ./images/onlinecourses@1x.jpg 1x,
+                                        ./images/onlinecourses@2x.jpg 2x
+                                    " media="(max-width: 767px)" />
+                                <source srcset="
+                                        ./images/onlinecourses-tbdt@1x.jpg 1x,
+                                        ./images/onlinecourses-tbdt@2x.jpg 2x
+                                    " media="(min-width: 768px)" />
+                                <img class="portfolio-image" src="./images/onlinecourses@1x.jpg"
+                                    srcset="./images/onlinecourses@1x.jpg 1x, ./images/onlinecourses@2x.jpg 2x" width="360" height="300"
+                                    alt="Woman in orange sweater in city">
+                            </picture>
                             <p class="overlay">14 Stylish and User-Friendly App Design Concepts &#183; Task Manager App &#183; Calorie Tracker App
                                 &#183; Exotic Fruit Ecommerce App &#183; Cloud Storage App
                             </p>
@@ -404,8 +476,8 @@
                     <use href="./images/icons.svg#icon-cross-tick"></use>
                 </svg>
             </button>
-            <p class="modal-title">Leave your contacts and we will call you back</p>
-            <form class="modal-window-form">
+            <form class="modal-form">
+                <p class="modal-title">Leave your contacts and we will call you back</p>
                 <div class="modal-form-item">
                     <label class="modal-form-label" for="user-name">Name</label>
                     <div class="modal-form-input-and-icon">
